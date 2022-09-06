@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .pointer {
+    @apply cursor-auto md:cursor-pointer
+  }
+
+  .modal {
+    @apply fixed inset-0 bg-gray-500/50 backdrop-blur-md flex justify-center items-center
+  }
+
+}
+
+@layer base {
+
+  body {
+    @apply tracking-wide select-none bg-smoke
+  }
+
+  button {
+    @apply flex pointer py-3 px-6 justify-center items-center font-bold tracking-widest rounded-full bg-blue-600 text-white focus:outline-none border-blue-600 border-2 shadow-md active:translate-y-0.5 active:scale-[0.99] disabled:bg-blue-600/30 disabled:border-blue-600/0 disabled:active:scale-100 disabled:active:translate-y-0
+  }
+
+  input {
+    @apply focus:outline-none tracking-wider border-2 p-2 rounded-md w-full placeholder-hint
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-widest
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-bold tracking-widest
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-bold tracking-widest
+  }
+
+  sub {
+    @apply text-[10px] md:text-xs text-gray-500
+  }
+
+  li {
+    @apply list-inside text-xs md:text-sm
+  }
+
+  a {
+    @apply text-blue-600 underline text-xs md:text-sm
+  }
+
+  p {
+    @apply text-xs md:text-sm
+  }
+
+  b {
+    @apply font-bold text-xs md:text-sm tracking-wider
+  }
+
+  main {
+    @apply p-4 mx-auto max-w-screen-md
+  }
+
+  menu {
+    @apply flex m-0 p-0 justify-evenly items-center
+  }
+
+  span {
+    @apply flex flex-col m-0 p-0 justify-start items-start
+  }
+
+  ::-webkit-scrollbar {
+    @apply hidden
+  }
+
+}
